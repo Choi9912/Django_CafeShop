@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'shop/base1.css' %}" type="text/css">
+</head>
+<body>
+
+{% block header %} {% include 'shop/header.html' %} {% endblock header %}
+<div id="wrap">
+    <div class="left-wrap">
+        {% block left_side %} {% include 'shop/left_side.html' %} {% endblock left_side %}
+    </div>
+
+    <div class="right-wrap">
+        {% block category %} {% include 'shop/category.html' %} {% endblock category %}
+    </div>
+</div>
+{% block footer %} {% include 'shop/footer.html' %} {% endblock footer %}
+
+{% block extra_body %}{% endblock %}
+
+</body>
+</html>

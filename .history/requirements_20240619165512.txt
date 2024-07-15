@@ -1,5 +1,0 @@
-Django==2.0.3
-pymysql
-django-allauth
-sorl-thumbnail
-Pillow

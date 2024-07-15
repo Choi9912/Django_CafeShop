@@ -1,0 +1,41 @@
+{% extends "shop/../account/base.html" %}
+
+{% block title %}
+    Checkout
+{% endblock title %}
+
+{% block content %}
+    <div class="content">
+        <div id="pagetitle">
+            <h3>Checkout</h3>
+        </div>
+        <form action="{% url 'shop:checkout' %}" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <h4>Order Summary</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for product in products %}
+                    <tr>
+                        <td>{{ product.name }}</td>
+                        <td>1</td>
+                        <td>{{ product.price }}</td>
+                    </tr>
+                    {% endfor %}
+                    <tr>
+                        <td colspan="2"><strong>Total</strong></td>
+                        <td><strong>{{ total_price }}</strong></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+{% endblock content %}

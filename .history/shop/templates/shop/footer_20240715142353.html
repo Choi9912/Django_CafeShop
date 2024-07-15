@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Footer</title>
+</head>
+<body>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <nav class="footer-nav">
+                <ul>
+                    <li><a href="{% url 'shop:index' %}">Home</a></li>
+                    <li><a href="{% url 'shop:cart' user.pk %}">Cart</a></li>
+                    <li><a href="{% url 'shop:order_list' user.pk %}">Orders</a></li>
+                    <li><a href="{% url 'shop:contact' %}">Contact Us</a></li>
+                    <li><a href="{% url 'shop:about' %}">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

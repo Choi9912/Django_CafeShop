@@ -1,0 +1,107 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    margin-left: 220px; /* Adjust this if your sidebar width changes */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile title styling */
+#profile_title h3 {
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Profile account summary styling */
+#profile_account ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#profile_account ul li {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 40px); /* Adjust the width for two columns */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#profile_account .title {
+    display: block;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#profile_account .able_data {
+    display: block;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#profile_account a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#profile_account a:hover {
+    background-color: #0056b3;
+}
+
+/* Profile main options styling */
+#profile_main ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#profile_main ul li {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#profile_main h3 a {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+#profile_main h3 a strong {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+}
+
+#profile_main p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
