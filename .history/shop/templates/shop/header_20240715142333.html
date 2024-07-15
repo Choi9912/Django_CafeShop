@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    {% load static %}
+</head>
+<body>
+    <header class="site-header">
+        <div class="logo">
+            <a href="{% url 'shop:index' %}">
+                <img src="{% static 'shop/images/weniv.jpg' %}" alt="Logo">
+
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="{% url 'shop:index' %}">Home</a></li>
+                <li><a href="{% url 'shop:cart' user.pk %}">Cart</a></li>
+                <li><a href="{% url 'shop:order_list' user.pk %}">Orders</a></li>
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'account_logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'account_login' %}">Login</a></li>
+                    <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

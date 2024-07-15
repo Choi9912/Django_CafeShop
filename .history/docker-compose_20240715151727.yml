@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: vkvkdl23  # Set the root password here
+      MYSQL_DATABASE: mydatabase
+      MYSQL_USER: tophia                    # Regular user
+      MYSQL_PASSWORD: vkvkdl23       # Password for the regular user
+    ports:
+      - "3307:3306"
+
+  web:
+    build: .
+    container_name: django_web
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_NAME=mydatabase
+      - DB_USER=root
+      - DB_PASSWORD=vkvkdl23

@@ -1,0 +1,151 @@
+/* shop/profile.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detailArea {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.product_img_area {
+    flex: 1;
+    min-width: 300px;
+    margin-right: 20px;
+}
+
+.product_img_area .key_img {
+    text-align: center;
+}
+
+.product_img_area img {
+    max-width: 100%;
+    height: auto;
+}
+
+.infoArea {
+    flex: 2;
+    min-width: 300px;
+}
+
+.infoArea h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.detailinfo {
+    margin-bottom: 20px;
+}
+
+.detailinfo p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.detail_payment {
+    margin-bottom: 20px;
+}
+
+.detail_payment table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+}
+
+.detail_payment th, .detail_payment td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.detail_payment th {
+    background-color: #f9f9f9;
+}
+
+.product_option {
+    width: 100%;
+}
+
+.product_quantity th, .product_quantity td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product_quantity th {
+    background-color: #f9f9f9;
+}
+
+.product_quantity select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.payment .btnArea {
+    margin-top: 20px;
+}
+
+.payment .btnArea ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+}
+
+.payment .btnArea ul li {
+    flex: 1;
+}
+
+.payment .btnArea button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.payment .btnArea button.cart {
+    background-color: #ff9900;
+    color: white;
+}
+
+.payment .btnArea button.buy {
+    background-color: #28a745;
+    color: white;
+}
+
+.payment .btnArea button.soldout {
+    background-color: #dc3545;
+    color: white;
+    cursor: not-allowed;
+}
+
+.messages {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.messages li {
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.messages li a {
+    color: #007bff;
+    text-decoration: underline;
+}

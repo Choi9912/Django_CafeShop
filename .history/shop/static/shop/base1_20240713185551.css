@@ -1,0 +1,40 @@
+/* static/css/base.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    display: flex;
+    
+    min-height: 100vh;
+}
+
+.left-wrap {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 5px;
+}
+
+.right-wrap {
+    width: 80%;
+    padding: 5px;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .left-wrap {
+        flex: 0 0 100%; /* Sidebar takes full width on smaller screens */
+    }
+
+    .right-wrap {
+        flex: 0 0 100%; /* Main content takes full width on smaller screens */
+    }
+}

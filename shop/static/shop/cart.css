@@ -1,0 +1,56 @@
+.content {
+    padding-top: 20px;
+    overflow: auto; /* 화면이 작아질 때 스크롤 추가 */
+}
+.order_list {
+    margin-top: 20px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th.thumb, td.thumb {
+    width: 100px;
+}
+th.product, td.product {
+    width: 40%;
+}
+th.quantity, td.quantity {
+    width: 10%;
+}
+th.price, td.price {
+    width: 15%;
+}
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.board_paging {
+    margin-top: 20px;
+    text-align: center;
+}
+.board_paging ol li {
+    display: inline-block;
+    margin: 0 5px;
+}
+.board_paging ol li a {
+    text-decoration: none;
+    color: #007bff;
+    padding: 5px 10px;
+    border: 1px solid #007bff;
+}
+.board_paging ol li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}

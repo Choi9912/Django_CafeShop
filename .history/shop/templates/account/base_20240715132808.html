@@ -1,0 +1,112 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'shop/base.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'shop/category.css' %}" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        #wrap {
+            display: flex;
+            flex: 1;
+        }
+        .left-wrap {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+        .right-wrap {
+            margin-left: 270px; /* Adjust based on sidebar width */
+            padding: 20px;
+            flex: 1;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            height: 40px;
+        }
+        nav {
+            display: flex;
+            align-items: center;
+        }
+        nav a {
+            color: #fff;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+{% block header %}
+<header>
+    <a href="{% url 'index' %}"><img class="logo" src="{% static 'shop/images/logo.svg' %}" alt="WCB CAFE"></a>
+    <nav>
+        <a href="{% url 'shop:home' %}">Shop</a>
+        <a href="#">Review</a>
+        <a href="#">Community</a>
+        <a href="#">About</a>
+        {% if user.is_active %}
+            <a href="{% url 'shop:profile' user.pk %}">My Page</a>
+            <a href="{% url 'shop:cart' user.pk %}">Cart</a>
+            <a href="{% url 'account_logout' %}">Logout</a>
+        {% else %}
+            <a href="{% url 'account_login' %}">Login</a>
+            <a href="{% url 'account_signup' %}">Sign Up</a>
+        {% endif %}
+    </nav>
+</header>
+{% endblock header %}
+
+<div id="wrap">
+    <div class="left-wrap">
+        {% block left_side %} {% include 'shop/left_side.html' %} {% endblock left_side %}
+    </div>
+
+    <div class="right-wrap">
+        {% block content %} {% endblock content %}
+    </div>
+</div>
+
+{% block footer %}
+<footer>
+    &copy; 2024 Shop. All rights reserved.
+</footer>
+{% endblock footer %}
+
+{% block extra_body %}{% endblock %}
+
+</body>
+</html>

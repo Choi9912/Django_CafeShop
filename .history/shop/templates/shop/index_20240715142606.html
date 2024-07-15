@@ -1,0 +1,52 @@
+{% extends "shop/../account/base.html" %}
+
+{% block title %}
+    Index
+{% endblock title %}
+
+{% block content %}
+
+        {% load static %}
+        {% load thumbnail %}
+        <link rel="stylesheet" type="text/css" href="{% static 'shop/index.css' %}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+        <!-- Page Header -->
+        <div id="home" class="big-bg">
+            <div class="home-content wrapper">
+                <h2 class="page-title">We'll Make Your Day</h2>
+                <p>멋진 카페에서 힐링 시간을 가지세요. 첨가물을 넣지 않은 재료로 건강한 음식을 만듭니다.</p>
+            </div>
+        </div>
+
+        <div id="weekly-slider" class="weekly_slide">
+            <div class="wrapper">
+                <h2><span>- WEEKLY BEST PRODUCTS -</span></h2>
+                <div class="slide_item">
+                    <ul>
+                        {% for product in products %}
+                        {% if product.hit >= 5 %}
+                            <li>
+                                <a href="{% url 'shop:product_detail' product.pk %}">
+                                    {% thumbnail product.image "200x200" crop="center" as im %}
+                                        <div><img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}" alt="{{ product.name }}"></div>
+                                    {% endthumbnail %}
+                                    <p>{{ product.name }}</p>
+                                    <p>조회수: {{ product.hit }}</p>
+                                </a>
+                            </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock content %}

@@ -1,0 +1,42 @@
+/* base1.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    display: flex;
+    min-height: 100vh; /* Ensure the flex container takes full height */
+}
+
+.right-wrap {
+    flex: 1; /* Takes up remaining space */
+    background-color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-wrap {
+    flex: 0 0 250px; /* Fixed width for the sidebar */
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@media (max-width: 768px) {
+    #wrap {
+        flex-direction: column;
+    }
+
+    .left-wrap, .right-wrap {
+        flex: 0 0 100%; /* Full width on smaller screens */
+    }
+}
