@@ -11,7 +11,7 @@
 - 사용자는 프로필 페이지에서 개인 정보를 관리할 수 있습니다.
 - 이 프로젝트는 Django의 ORM을 사용하여 데이터베이스와 상호작용하며, 페이지네이션을 통해 대용량 데이터를 효과적으로 처리합니다. 코드는 가독성을 고려하여 작성되었으며, 사용 
  자 경험을 중시하는 디자인을 채택하고 있습니다.
-
+- Docker 활용하여 배포
 
 ## Stack
 **Enviroment**  
@@ -27,7 +27,10 @@
 **Development** 
 
 
-<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white"> <img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white"> 
+<img src="https://img.shields.io/badge/django-092E20?style=for-the-badge&logo=django&logoColor=white"> 
+<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">  
+<img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=Bootstrap&logoColor=white"> 
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=Docker&logoColor=white"> 
 
 
 ## 화면 구성 📺

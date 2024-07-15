@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     environment:
-      DJANGO_SETTINGS_MODULE: cafe_shop.settings
-    
-volumes:
-  db_data:
+      - DB_HOST=db
+      - DB_NAME=mydatabase
+      - DB_USER=root
+      - DB_PASSWORD=vkvkdl23
